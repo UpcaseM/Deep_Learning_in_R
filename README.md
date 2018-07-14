@@ -8,11 +8,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+
+- Install R https://www.r-project.org/
+- Install RStudio https://www.rstudio.com/
+
+Package required:
+```
+install.packages("tidyverse") # Data Manipulation, Visualization
+install.packages("keras") # Neural Network 
 
 ```
-Give examples
-```
+*If you have Anaconda installed, please make sure you installed keras under current user.*
 
 ### Installing
 
