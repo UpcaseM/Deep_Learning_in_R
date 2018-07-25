@@ -1,9 +1,4 @@
-
-install.packages("keras")
-install.packages("tidyverse")
-install.packages("AppliedPredictiveModeling")
-install.packages("e1071")
-library(AppliedPredictiveModeling)
+library(caret)
 library(e1071)
 library(keras)
 library(tidyverse)
@@ -70,6 +65,7 @@ mydata<-mydata %>%
 dmy <- dummyVars(" ~ .", data = mydata[,highSkew])
 trsf <-predict(dmy, newdata = mydata[,highSkew])
 ncol(trsf)
+head(trsf)
 
 mydata<- mydata %>%
   select(-one_of(highSkew))
@@ -101,41 +97,6 @@ trainlabels<-to_categorical(train_target)
 testlabels<-to_categorical(test_target)
 testlabels
 
-#create sequential model
-model<-keras_model_sequential()
-model %>%
-  layer_dense(units = 10,activation='relu',input_shape = c(total_col-1))%>%
-  layer_dense(units=5,activation = 'softmax')
-summary(model)
-
-
-#compile
-model %>%
-  compile(loss='categorical_crossentropy',
-          optimizer = 'adam',
-          metrics = 'accuracy')
-
-# fit model
-hist<- model %>%
-  fit(train,
-      trainlabels,
-      epoch=50,
-      batch_size = 64,
-      validation_split = 0.2)
-
-#evaluate model with test data
-model %>%
-  evaluate(test,testlabels)
-
-#prediction and confusion matrix- test data
-prob<-model %>%
-  predict_proba(test)
-pred<-model %>%
-  predict_classes(test)
-
-table1<-table(predicted=pred,actual=test_target)
-
-#fine-tune model
 
 #create sequential model
 model1<-keras_model_sequential()
@@ -162,8 +123,8 @@ model1 %>%
 hist<- model1 %>%
   fit(train,
       trainlabels,
-      epoch=50,
-      batch_size = 32,
+      epoch=25,
+      batch_size = 128,
       validation_split = 0.2)
 
 #evaluate model with test data
@@ -177,3 +138,4 @@ pred<-model1 %>%
   predict_classes(test)
 
 table1<-table(predicted=pred,actual=test_target)
+table1

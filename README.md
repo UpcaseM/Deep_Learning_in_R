@@ -1,66 +1,25 @@
-# Deep Learning with Neural Network in R
+# Deep Learning with R
 
-Here are 5 learning projects with neural networking in R. 
+Here are some learning projects with R using Tensorflow and Keras. 
 
-## Getting Started
+## Projects List
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+###Binary Classification
 
-### Prerequisites
+###Multiclass Classification
+
+###Image Classification
 
 
-- Install R https://www.r-project.org/
-- Install RStudio https://www.rstudio.com/
+## Prerequisites
 
-Package required:
-```
-install.packages("tidyverse") # Data Manipulation, Visualization
-install.packages("keras") # Neural Network 
 
-```
-*If you have Anaconda installed, please make sure you installed keras under current user.*
+- [Install R](https://www.r-project.org/)(R versions 3.2 and higher)
+- [Install RStudio](https://www.rstudio.com/) (I use Windowns 10.)
+- [Install Anaconda3](https://www.anaconda.com/download/)
+- Install keras and Tensorflow in R. See detail instructions [here](https://tensorflow.rstudio.com/keras/reference/install_keras.html).
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+All packages required are provided in each notebook or R script.
 
 ## Built With
 
@@ -71,6 +30,5 @@ Add additional notes about how to deploy this on a live system
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Inspired by [RStudio blogs](https://tensorflow.rstudio.com/categories/keras/page/2.html) and cases in [Deep Learning with R](https://www.amazon.com/Deep-Learning-R-Francois-Chollet/dp/161729554X/ref=sr_1_1_sspa?ie=UTF8&qid=1531603519&sr=8-1-spons&keywords=deep+learning+with+r&psc=1)
+
