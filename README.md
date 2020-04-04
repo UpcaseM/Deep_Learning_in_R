@@ -4,11 +4,11 @@ Here are some learning projects with R using Tensorflow and Keras.
 
 ## Projects List
 
-###Binary Classification
+### Binary Classification
 
-###Multiclass Classification
+### Multiclass Classification
 
-###Image Classification
+### Image Classification
 
 
 ## Prerequisites
